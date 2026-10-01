@@ -43,8 +43,8 @@ bdi { unicode-bidi: isolate; }
 
 /* who / contact */
 .vmwrap { position: absolute; inset-inline-end: 0; top: 0; width: 1000px; height: 1080px; overflow: hidden; }
-.who .vm, .contact .vm { position: absolute; inset-inline-end: -140px; bottom: -20px; height: 760px; }
-.who .col, .contact .col { position: relative; width: 1000px; }
+.who .vm, .closing .vm { position: absolute; inset-inline-end: -140px; bottom: -20px; height: 760px; }
+.who .col { position: relative; width: 1000px; }
 .who h1 { font-size: 64px; max-width: 1100px; }
 .groups { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 36px; margin-top: 54px; }
 .groups li { display: flex; align-items: center; gap: 16px; font-size: 22px; line-height: 1.3; padding: 18px 0; border-top: 1px solid rgba(201,162,39,.35); }
@@ -176,21 +176,22 @@ figcaption { display: flex; justify-content: space-between; align-items: flex-en
 .pkg .groups li { font-size: 26px; padding: 30px 0; }
 .pkg .groups.ring { grid-template-columns: repeat(2, 1fr); max-width: 1060px; margin-top: 90px; position: relative; }
 
-/* contact */
-.contact .rows { list-style: none; margin-top: 50px; }
-.contact .rows li { display: flex; gap: 30px; align-items: baseline; font-size: 30px; padding: 20px 0; border-top: 1px solid rgba(247,245,239,.14); }
-.contact .rows span { color: var(--g); font-size: 20px; width: 160px; flex: 0 0 160px; }
-.contact .rows b { font-weight: 700; }
-.contact .col .logo { width: 440px; mix-blend-mode: lighten; }
-.contact .endorse { display: flex; align-items: center; gap: 40px; margin-top: 6px; margin-inline-start: -30px; }
-.contact .vr { width: 1.5px; height: 210px; background: var(--g); flex: 0 0 1.5px; }
-.contact .vm { height: 540px; inset-inline-end: -260px; }
+/* closing */
+.closing { padding: 0; }
+.closing .vmwrap { width: 760px; height: 420px; top: auto; bottom: 0; }
+.closing .vm { height: 420px; inset-inline-end: -200px; bottom: -10px; }
+.closing .stack { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0; padding-bottom: 40px; }
+.closing .logo { width: 520px; mix-blend-mode: lighten; }
+.closing .tag { font-family: "TheSansArab-Black", "TheSansArab", sans-serif; font-size: 44px; color: var(--iv); margin-top: 8px; }
+.closing .hr { width: 36px; height: 1.5px; background: var(--g); margin: 46px 0 36px; }
+.closing .saa { align-items: center; gap: 18px; }
+.closing .saa span { font-size: 16px; }
 .saa { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .saa span { font-size: 18px; letter-spacing: .12em; color: var(--g); }
-.saa img { height: 64px; width: auto; display: block; }
+.saa img { height: 56px; width: auto; display: block; }
 .cover-saa { position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%); align-items: center; }
 .cover-saa span { font-size: 16px; }
-.cover-saa img { height: 60px; }
+.cover-saa img { height: 56px; }
 
 /* print: all slides as pages, posters instead of players */
 @media print {
@@ -221,7 +222,7 @@ figcaption { display: flex; justify-content: space-between; align-items: flex-en
       <img class="logo" src="../media/brand/logo.jpg" alt="Visionaty">
       <div class="tag">Turning ideas into visuals</div>
       <div class="sub">Portfolio · October 2026</div>
-      <div class="saa cover-saa"><span>Powered by</span><img src="../media/brand/saa-on-dark.png" alt="SAA"></div>
+      <div class="saa cover-saa"><span>Powered by</span><img src="../media/brand/saa-mark.png" alt="SAA"></div>
     </section>
 <section class="slide dark who">
       <div class="vmwrap"><img class="vm" src="../media/brand/v-mark.png" alt=""></div>
@@ -435,13 +436,13 @@ figcaption { display: flex; justify-content: space-between; align-items: flex-en
       <p class="lead">Every service combines into one package, shaped by the project and its needs. Filming, survey, inspection and record, from one partner, to one standard.</p>
       <ul class="groups ring"><li><span class="ic"><svg viewBox="0 0 48 48"><path d="M8 14h32v22H8z"/><path d="M8 20h32M8 30h32M16 14v22M32 14v22"/></svg></span><span>Cinematic filming and production</span></li><li><span class="ic"><svg viewBox="0 0 48 48"><path d="M6 36 20 10l10 18 6-8 6 16z"/><path d="M6 36h36"/><circle cx="36" cy="10" r="3"/></svg></span><span>Aerial survey and measurement</span></li><li><span class="ic"><svg viewBox="0 0 48 48"><path d="M20 8a4 4 0 0 1 8 0v18a8 8 0 1 1-8 0z"/><circle cx="24" cy="32" r="3"/><path d="M34 12h8M34 20h6M34 28h4"/></svg></span><span>Thermal imaging</span></li><li><span class="ic"><svg viewBox="0 0 48 48"><path d="M24 6 40 15v18L24 42 8 33V15z"/><path d="M8 15l16 9 16-9M24 24v18"/></svg></span><span>360 tours and 3D models</span></li><li><span class="ic"><svg viewBox="0 0 48 48"><path d="M24 42V22"/><path d="M24 30c0-9 7-14 16-14 0 9-7 14-16 14zM24 24c0-8-6-12-14-12 0 8 6 12 14 12z"/></svg></span><span>Agricultural survey</span></li><li><span class="ic"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="4"/><path d="M24 6v8M24 34v8M6 24h8M34 24h8M11 11l6 6M31 31l6 6M37 11l-6 6M17 31l-6 6"/></svg></span><span>Advanced LiDAR</span></li></ul>
     </section>
-<section class="slide dark contact">
+<section class="slide dark closing">
       <div class="vmwrap"><img class="vm" src="../media/brand/v-mark.png" alt=""></div>
-      <div class="col">
-        <div class="eye"><i></i><span>Get in touch</span></div>
-        <h1>Let's start with your project</h1>
-        <ul class="rows"><li><span>Phone</span><b><bdi dir="ltr">[+966 5X XXX XXXX]</bdi></b></li><li><span>Email</span><b><bdi dir="ltr">[email@visionaty.sa]</bdi></b></li><li><span>Instagram</span><b><bdi dir="ltr">[@visionaty]</bdi></b></li></ul>
-        <div class="endorse"><img class="logo" src="../media/brand/logo.jpg" alt="Visionaty"><i class="vr"></i><div class="saa"><span>Powered by</span><img src="../media/brand/saa-on-dark.png" alt="SAA"></div></div>
+      <div class="stack">
+        <img class="logo" src="../media/brand/logo.jpg" alt="Visionaty">
+        <div class="tag">Turning ideas into visuals</div>
+        <i class="hr"></i>
+        <div class="saa"><span>Powered by</span><img src="../media/brand/saa-mark.png" alt="SAA"></div>
       </div>
     </section>
 </div>
