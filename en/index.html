@@ -181,7 +181,16 @@ figcaption { display: flex; justify-content: space-between; align-items: flex-en
 .contact .rows li { display: flex; gap: 30px; align-items: baseline; font-size: 30px; padding: 20px 0; border-top: 1px solid rgba(247,245,239,.14); }
 .contact .rows span { color: var(--g); font-size: 20px; width: 160px; flex: 0 0 160px; }
 .contact .rows b { font-weight: 700; }
-.contact .col .logo { width: 300px; margin-top: 80px; mix-blend-mode: lighten; }
+.contact .col .logo { width: 280px; mix-blend-mode: lighten; }
+.contact .endorse { display: flex; align-items: center; gap: 44px; margin-top: 70px; }
+.contact .vr { width: 1.5px; height: 150px; background: var(--g); flex: 0 0 1.5px; }
+.contact .vm { height: 640px; inset-inline-end: -200px; }
+.saa { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.saa span { font-size: 18px; letter-spacing: .12em; color: var(--g); }
+.saa img { height: 64px; width: auto; display: block; }
+.cover-saa { position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%); align-items: center; }
+.cover-saa span { font-size: 16px; }
+.cover-saa img { height: 60px; }
 
 /* print: all slides as pages, posters instead of players */
 @media print {
@@ -208,10 +217,11 @@ figcaption { display: flex; justify-content: space-between; align-items: flex-en
 </head>
 <body>
 <div class="stage">
-<section class="slide dark cover" style="background-image:url('../media/brand/bg-16x9.png')">
+<section class="slide dark cover" style="background-image:url('../media/brand/bg-cover-16x9.png')">
       <img class="logo" src="../media/brand/logo.jpg" alt="Visionaty">
       <div class="tag">Turning ideas into visuals</div>
       <div class="sub">Portfolio · October 2026</div>
+      <div class="saa cover-saa"><span>Powered by</span><img src="../media/brand/saa-on-dark.png" alt="SAA"></div>
     </section>
 <section class="slide dark who">
       <div class="vmwrap"><img class="vm" src="../media/brand/v-mark.png" alt=""></div>
@@ -431,7 +441,7 @@ figcaption { display: flex; justify-content: space-between; align-items: flex-en
         <div class="eye"><i></i><span>Get in touch</span></div>
         <h1>Let's start with your project</h1>
         <ul class="rows"><li><span>Phone</span><b><bdi dir="ltr">[+966 5X XXX XXXX]</bdi></b></li><li><span>Email</span><b><bdi dir="ltr">[email@visionaty.sa]</bdi></b></li><li><span>Instagram</span><b><bdi dir="ltr">[@visionaty]</bdi></b></li></ul>
-        <img class="logo" src="../media/brand/logo.jpg" alt="Visionaty">
+        <div class="endorse"><img class="logo" src="../media/brand/logo.jpg" alt="Visionaty"><i class="vr"></i><div class="saa"><span>Powered by</span><img src="../media/brand/saa-on-dark.png" alt="SAA"></div></div>
       </div>
     </section>
 </div>
