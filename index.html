@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Visionaty | Portfolio</title>
+<style>
+  :root { --black: #111111; --gold: #C9A227; --ivory: #F7F5EF; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; background: var(--black); color: var(--ivory); }
+  body {
+    font-family: "TheSansArab", system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 40px; padding: 24px; text-align: center;
+  }
+  .logo { width: min(340px, 70vw); height: auto; display: block; }
+  .langs { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .langs a {
+    min-width: 170px; padding: 16px 28px; border: 1px solid var(--gold); color: var(--ivory);
+    text-decoration: none; font-size: 20px; letter-spacing: .02em; transition: background .2s, color .2s;
+  }
+  .langs a:hover, .langs a:focus-visible { background: var(--gold); color: var(--black); outline: none; }
+  .langs a[lang="ar"] { font-size: 22px; }
+  .note { font-size: 13px; color: rgba(247,245,239,.45); letter-spacing: .04em; }
+</style>
+</head>
+<body>
+  <img class="logo" src="media/brand/logo.jpg" alt="Visionaty">
+  <nav class="langs">
+    <a href="ar/" lang="ar" dir="rtl">العربية</a>
+    <a href="en/" lang="en">English</a>
+  </nav>
+  <p class="note">PORTFOLIO</p>
+</body>
+</html>
